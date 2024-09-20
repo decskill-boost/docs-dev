@@ -67,16 +67,6 @@ export default function Home() {
       >
         <HeroTitle />
         <main>
-          <Center>
-            <Container mt="lg" px="0px" mx="1rem">
-              <Image
-                src={
-                  require("@site/static/img/bracket-screenshot-design.png")
-                    .default
-                }
-              />
-            </Container>
-          </Center>
 
           <CardGradient />
 
@@ -86,12 +76,7 @@ export default function Home() {
 
           <FeaturesCards />
 
-          <Container mt="lg" px="0px">
-            <Title order={2} className={classes.title} ta="center" my="lg">
-              Screenshots
-            </Title>
-            <HomeCarousel />
-          </Container>
+
         </main>
       </Layout>
     </MantineProvider>

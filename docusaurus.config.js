@@ -6,9 +6,9 @@ const { themes } = require("prism-react-renderer");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: " DC232",
-  tagline: "Frewwwe and open source tournament scheduling system",
-  favicon: "img/logo.svg",
+  title: " Decskill Boost Documentation",
+  tagline: "Boost yourself.",
+  favicon: "img/logodecskill.svg",
   url: "https://decskill-boost.github.io",
   baseUrl: "/docs-dev/",
   organizationName: "decskill-boost",
@@ -51,10 +51,10 @@ const config = {
       // Replace with your project's social card
       image: "img/bracket-screenshot-design.png",
       navbar: {
-        title: "Bracket",
+        title: " ",
         logo: {
           alt: "Bracket Logo",
-          src: "img/logo.svg",
+          src: "img/logodecskill.svg",
         },
         items: [
           {
@@ -140,7 +140,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Bracket - Self-Hosted Tournament System.<br/> Licensed under AGPL-v3.0. Copyright © ${new Date().getFullYear()} Bracket. Built with Docusaurus.`,
+        copyright: `Decskill - Self-Hosted Documentation System.<br/> Licensed under AGPL-v3.0. Copyright © ${new Date().getFullYear()} Decskill. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.oneLight,

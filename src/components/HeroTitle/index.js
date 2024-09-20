@@ -32,12 +32,12 @@ export function HeroTitle() {
             variant="gradient"
             gradient={{ from: "indigo", to: "#674ad6" }}
             onClick={() => {
-              open("https://www.bracketapp.nl/demo", "_self");
+              open("", "_self");
             }}
           >
             <Center inline>
               <IconRocket size="32px" style={{ marginRight: "0.5rem" }} />
-              Demo
+              Know more
             </Center>
           </Button>
           <Button
