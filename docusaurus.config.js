@@ -10,7 +10,7 @@ const config = {
   tagline: "Frewwwe and open source tournament scheduling system",
   favicon: "img/logo.svg",
   url: "https://decskill-boost.github.io",
-  baseUrl: "/",
+  baseUrl: "/docs-dev/",
   organizationName: "decskill-boost",
   projectName: "docs-dev",
   onBrokenLinks: "throw",
