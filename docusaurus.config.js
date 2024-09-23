@@ -8,7 +8,7 @@ const { themes } = require("prism-react-renderer");
 const config = {
   title: " Decskill Boost Documentation",
   tagline: "Boost yourself.",
-  favicon: "img/logodecskill.svg",
+  favicon: "img/logodec.png",
   url: "https://decskill-boost.github.io",
   baseUrl: "/docs-dev/",
   organizationName: "decskill-boost",
@@ -54,7 +54,7 @@ const config = {
         title: " ",
         logo: {
           alt: "Bracket Logo",
-          src: "img/logodecskill.svg",
+          src: "img/logodec.png",
         },
         items: [
           {

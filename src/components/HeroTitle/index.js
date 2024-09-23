@@ -8,21 +8,19 @@ export function HeroTitle() {
     <div className={classes.wrapper}>
       <Container maxSize={"400px"} className={classes.inner}>
         <h1 className={classes.title}>
-          Free and open source{" "}
           <Text
             component="span"
             variant="gradient"
             gradient={{ from: "indigo", to: "#674ad6" }}
             inherit
           >
-            tournament scheduling
+            Knowledge Hub
           </Text>{" "}
-          system
+          for Decskill Developers
         </h1>
 
         <Text className={classes.description} color="dimmed">
-          Build tournament setups, add teams, schedule matches, keep track of
-          scores and present ranking live to the public.
+          Enhance your skills with Decskill’s detailed documentation, tools, and resources. Build, learn, and advance your technical expertise.
         </Text>
 
         <Group className={classes.controls}>
