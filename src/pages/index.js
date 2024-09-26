@@ -70,13 +70,6 @@ export default function Home() {
 
           <CardGradient />
 
-          <Title order={2} className={classes.title} ta="center" mt="lg">
-            Features
-          </Title>
-
-          <FeaturesCards />
-
-
         </main>
       </Layout>
     </MantineProvider>

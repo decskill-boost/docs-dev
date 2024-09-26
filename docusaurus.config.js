@@ -97,19 +97,6 @@ const config = {
             ],
           },
           {
-            title: "Running Bracket",
-            items: [
-              {
-                label: "Configuration",
-                to: "/docs/running-bracket/configuration",
-              },
-              {
-                label: "Deployment",
-                to: "/docs/deployment",
-              },
-            ],
-          },
-          {
             title: "Community",
             items: [
               {
@@ -127,15 +114,15 @@ const config = {
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/evroon/bracket",
+                href: "https://github.com/",
               },
               {
                 label: "License",
-                href: "https://github.com/evroon/bracket/blob/master/LICENSE",
+                href: "https://github.com/",
               },
               {
                 label: "Changelog",
-                href: "https://github.com/evroon/bracket/releases",
+                href: "https://github.com/",
               },
             ],
           },
