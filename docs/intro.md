@@ -142,7 +142,3 @@ We welcome contributions from all members of our development community. If you h
 6. Ensure your pull request includes a detailed description of your changes.
 
 Our team will review your contribution and merge it if it aligns with our standards and goals.
-
-## License
-
-This repository is licensed under the [MIT License](LICENSE). By contributing to this project, you agree to license your contributions under the same license.
