@@ -15,7 +15,6 @@ In this repository, you will find best practices and coding standards for differ
 
 ## Guidelines
 
-You can see in more  detail the best coding practices here [Best Coding Practices Manual](./resources/rules/security_controls.md)
 
 ### [Javascript]
 
