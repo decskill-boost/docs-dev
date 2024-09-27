@@ -4,42 +4,160 @@ sidebar_position: 1
 
 # Introduction
 
-[Bracket](https://github.com/evroon/bracket) is a tournament system meant to be easy to use. Bracket
-is written in async Python (with [FastAPI](https://fastapi.tiangolo.com)) and
-[Next.js](https://nextjs.org/) as frontend using the [Mantine](https://mantine.dev/) library.
+# Decskill Best Practices Repository
 
-## Overview of features
+Welcome to our company's Best Practices Repository! This repository aims to provide guidelines and best practices for programming across various code languages. It serves as a reference for our developers to ensure code quality, maintainability, and consistency.
 
-It has the following features:
+## Table of Contents
 
-- Supports **single elimination, round-robin and swiss** formats.
-- **Build your tournament structure** with multiple stages that can have multiple groups/brackets in
-  them.
-- **Drag-and-drop matches** to different courts or reschedule them to another start time.
-- Various **dashboard pages** are available that can be presented to the public, customized with a
-  logo.
-- Create/update **teams**, and add players to **teams**.
-- Create **multiple clubs**, with **multiple tournaments** per club.
-- **Swiss tournaments** can be handled dynamically, with automatic scheduling of matches.
+- [Introduction](#introduction)
+- [Guidelines](#guidelines)
+- [General Guidelines](#general_guidelines)
+- [Contributing](#contributing)
+- [License](#license)
+- [Cloud Manual ☁️](./resources/cloud/cloud-manual.md)
+- [Control Versions Manual 🔎 ](./resources/git-control-version/manual.md)
+- [Development Phases Manual](./resources/rules/development_phases.md)
+- [Development Env Transitions Manual](./resources/rules/development_transition.md)
+- [Main Development Rules Manual](./resources/rules/rules.md)
+- [Security Controls Manual](./resources/rules/security_controls.md)
 
-## Why does this exist?
 
-There are plenty of tournament systems to be found online. So why does Bracket exist?
+## Introduction
 
-**Firstly**, there are **no complete open-source tournament systems to be found** [on
-github](https://github.com/search?q=tournament%20system&type=repositories). Let me know if you find
-one, I will list it here as alternative to Bracket. Furthermore, the closed-source tournament
-systems that can be found online are typically payware, and **quite expensive**.
+In this repository, you will find best practices and coding standards for different programming languages commonly used within our company. These guidelines are designed to improve code readability, maintainability, and performance, while fostering collaboration and consistency across our development teams.
 
-**Secondly**, there is a **lack of tournament systems that support Swiss tournaments**. There are a
-few that exist, but they're typically quite ancient projects. Furthermore, AFAIK the Swiss
-tournament systems that exist usually only support Swiss, no other types of tournament elements
-(round-robin, elimination etc.). That is quite a limitation when you want to host a tournament that
-starts with Swiss and determines a winner based on a knockoff (elimination) stage.
+## Guidelines
 
-**Finally**, I developed this project to learn more about Next.js and apply my Python (e.g. FastAPI)
-experience to a project with a real purpose.
+You can see in more  detail the best coding practices here [Best Coding Practices Manual](./resources/rules/security_controls.md)
 
-## Quickstart
+### [Javascript]
 
-To get started, follow the steps described in [quickstart](running-bracket/quickstart.md)
+- [Javacript Best Practices](https://github.com/airbnb/javascript)
+
+### [PHP]
+
+- [PHP Best Practices](https://phptherightway.com/)
+
+### [NodeJS]
+
+- [NodeJS Best Practices](https://github.com/goldbergyoni/nodebestpractices)
+
+### [ReactJS]
+
+- [ReactJS Best Practices](https://github.com/airbnb/javascript/tree/master/react)
+
+### [Angular]
+
+- [Angular Best Practices](https://github.com/lubkoKuzenko/angular-clean-code)
+
+## General Guidelines
+
+- Write clean and readable code by following established programming paradigms and best practices for the specific programming language or framework.
+- Use meaningful names for variables, functions, and classes to enhance code understanding.
+- Avoid duplicating code; promote code reuse through modularization and abstraction.
+- Keep code files concise and focused on a single responsibility.
+- Minimize the use of global variables and favor encapsulation.
+- Optimize code readability by adding comments when necessary.
+
+### Project Structure
+
+- Organize project files and directories logically, reflecting the architectural design and component hierarchy.
+- Follow established conventions for file and folder naming.
+- Separate concerns by applying appropriate separation of files based on functionality (e.g., models, views, controllers, utilities, tests).
+- Consider scalability and maintainability when defining the project structure.
+
+### Naming Conventions
+
+- Follow consistent naming conventions for variables, functions, classes, and files.
+- Use descriptive names that reflect the purpose or functionality of the entity being named.
+- Avoid ambiguous or misleading names that could lead to confusion.
+
+### Documentation
+
+- Document code and APIs using clear and concise comments.
+- Provide high-level documentation for the project, including its purpose, architecture, and usage instructions.
+- Maintain up-to-date and relevant documentation throughout the development lifecycle.
+- Use Markdown or a similar lightweight markup language for creating and formatting documentation.
+
+### Testing
+
+- Write automated tests to validate the functionality of the code.
+- Aim for high test coverage to catch potential issues and regressions.
+- Use a testing framework appropriate for the programming language or framework being used.
+- Ensure that tests are easy to run and maintain, and regularly run them as part of the development process.
+
+### Security
+
+- Follow security best practices when handling sensitive data or interacting with external systems.
+- Validate and sanitize user inputs to prevent common security vulnerabilities like cross-site scripting (XSS) and SQL injection.
+- Implement appropriate access controls and authentication mechanisms based on the project's requirements.
+- Stay up-to-date with security patches and vulnerabilities related to dependencies or frameworks.
+
+### Performance
+
+- Optimize code for performance by following best practices for the programming language or framework being used.
+- Minimize unnecessary computations, loops, and database queries.
+- Use caching mechanisms to improve response times.
+- Profile and analyze code performance to identify bottlenecks and areas for optimization.
+
+### Code Review
+
+- Conduct code reviews to ensure code quality and adherence to best practices.
+- Encourage constructive feedback and collaboration among team members.
+- Focus on readability, maintainability, and adherence to coding standards during code reviews.
+- Use code review tools or platforms to streamline the review process.
+
+### Version Control
+
+- Use a version control system (e.g., Git) to track and manage code changes.
+- Follow best practices for branching, committing, and merging code.
+- Provide meaningful commit messages that describe the changes made.
+- Regularly pull the latest changes from the repository to stay up-to-date with the project's main branch.
+
+### Continuous Integration and Deployment
+
+- Set up a continuous integration (CI) system to automatically build, test, and analyze the codebase.
+- Configure automated deployment processes to streamline the release and deployment workflow.
+- Ensure that the CI/CD pipeline includes steps for code quality checks, testing, and security scans.
+
+### Dependencies
+
+- Manage dependencies using a package manager appropriate for the programming language or framework being used.
+- Specify version constraints for dependencies to ensure compatibility and avoid unexpected issues.
+- Regularly update dependencies to benefit from bug fixes, security patches, and new features.
+
+### Error Handling
+
+- Implement appropriate error handling mechanisms to gracefully handle exceptions and errors.
+- Provide informative error messages that aid in troubleshooting and debugging.
+- Use try-catch blocks or equivalent constructs to handle expected exceptions and prevent application crashes.
+
+### Logging
+
+- Use logging frameworks or libraries to capture important application events and messages.
+- Log relevant information for debugging, auditing, and monitoring purposes.
+- Set appropriate log levels and ensure log files are stored securely and monitored.
+
+### Internationalization and Localization
+
+- Design applications with internationalization (i18n) and localization (l10n) support in mind.
+- Separate translatable strings from the codebase and provide translations for different languages and locales.
+- Use localization libraries or frameworks to simplify the process of adapting the application to different languages.
+
+## Contributing
+
+We welcome contributions from all members of our development community. If you have suggestions, improvements, or additional best practices, please follow these steps:
+
+1. Fork the repository to your GitHub account.
+2. Create a new branch for your changes.
+3. Make your modifications and commit them to your branch.
+4. Push your changes to your forked repository.
+5. Submit a pull request from your branch to the main repository.
+6. Ensure your pull request includes a detailed description of your changes.
+
+Our team will review your contribution and merge it if it aligns with our standards and goals.
+
+## License
+
+This repository is licensed under the [MIT License](LICENSE). By contributing to this project, you agree to license your contributions under the same license.
