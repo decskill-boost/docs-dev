@@ -8,20 +8,6 @@ sidebar_position: 1
 
 Welcome to our company's Best Practices Repository! This repository aims to provide guidelines and best practices for programming across various code languages. It serves as a reference for our developers to ensure code quality, maintainability, and consistency.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Guidelines](#guidelines)
-- [General Guidelines](#general_guidelines)
-- [Contributing](#contributing)
-- [License](#license)
-- [Cloud Manual ☁️](./resources/cloud/cloud-manual.md)
-- [Control Versions Manual 🔎 ](./resources/git-control-version/manual.md)
-- [Development Phases Manual](./resources/rules/development_phases.md)
-- [Development Env Transitions Manual](./resources/rules/development_transition.md)
-- [Main Development Rules Manual](./resources/rules/rules.md)
-- [Security Controls Manual](./resources/rules/security_controls.md)
-
 
 ## Introduction
 
