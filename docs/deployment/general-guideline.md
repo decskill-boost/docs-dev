@@ -126,7 +126,7 @@ If the changes are already pushed to the remote repository, you need to push the
 git push origin <branch_name>
 ```
 
-Replace <branch_name> with the name of your branch.
+Replace branch_name with the name of your branch.
 
 If you want to completely remove the commits after the specified commit, you can use the git reset command. Be cautious, as this will rewrite history.
 
