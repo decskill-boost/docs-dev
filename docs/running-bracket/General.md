@@ -111,26 +111,3 @@ It is a widely used pattern in web development, with frameworks like Angular and
 
 By following best practices, naming conventions, coding standards, and design patterns, you can create maintainable, efficient, and well-structured code across various programming languages and frameworks. It's essential to adapt these principles to your specific project's needs while ensuring consistency and readability in your codebase. Happy coding!
 
-
-
-
-
-To quickly run bracket to see how it works, clone it and run `docker compose up`:
-
-```bash
-git clone git@github.com:evroon/bracket.git
-cd bracket
-sudo docker compose up -d
-```
-
-This will start the backend and frontend of Bracket, as well as a postgres instance. You should now
-be able to view bracket at `http://localhost:3000`. You can log in with the following credentials:
-
-- Username: `test@example.org`
-- Password: `aeGhoe1ahng2Aezai0Dei6Aih6dieHoo`.
-
-To insert dummy rows into the database, run:
-
-```bash
-sudo docker exec bracket-backend pipenv run ./cli.py create-dev-db
-```

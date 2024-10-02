@@ -15,24 +15,13 @@ In this repository, you will find best practices and coding standards for differ
 
 ## Guidelines
 
-
-### [Javascript]
-
 - [Javacript Best Practices](https://github.com/airbnb/javascript)
-
-### [PHP]
 
 - [PHP Best Practices](https://phptherightway.com/)
 
-### [NodeJS]
-
 - [NodeJS Best Practices](https://github.com/goldbergyoni/nodebestpractices)
 
-### [ReactJS]
-
 - [ReactJS Best Practices](https://github.com/airbnb/javascript/tree/master/react)
-
-### [Angular]
 
 - [Angular Best Practices](https://github.com/lubkoKuzenko/angular-clean-code)
 
