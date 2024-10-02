@@ -1,6 +1,6 @@
 
 
-![image](https://github.com/decskill-boost/.github/assets/78824435/734ec73d-a685-4264-bbd3-ede08a1e042e)
+# Git Guidelines
 
 ## Table of Contents
 - [Introduction](#introduction)

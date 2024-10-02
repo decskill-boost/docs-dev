@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Repository Creation and Organization Guidelines for the Development CoE
+# Repository Guidelines
 
 ## 1. Repository Naming
 - Use clear, concise, and descriptive names.
@@ -58,7 +58,5 @@ Follow established coding standards for each language:
 ## 9. Documentation
 - Keep documentation up to date for both developers and end users.
 - Use tools like Swagger for API documentation and PlantUML for architecture diagrams.
-
----
 
 

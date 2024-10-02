@@ -2,8 +2,7 @@
 sidebar_position: 0
 ---
 
-
-# Quickstart
+# Best Practices
 
 # Best Practices and Naming Conventions in Programming
 

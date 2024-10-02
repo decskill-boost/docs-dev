@@ -64,12 +64,7 @@ const config = {
             label: "Documentation",
           },
           {
-            label: "Quickstart",
-            href: "/docs/running-bracket/quickstart",
-            position: "left",
-          },
-          {
-            href: "https://github.com/evroon/bracket",
+            href: "https://github.com/",
             label: "GitHub",
             position: "left",
           },
@@ -89,23 +84,6 @@ const config = {
               {
                 label: "Introduction",
                 to: "/docs/intro",
-              },
-              {
-                label: "Quickstart",
-                to: "/docs/running-bracket/quickstart",
-              },
-            ],
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Contributing",
-                to: "/docs/community/contributing",
-              },
-              {
-                label: "Developing",
-                to: "/docs/community/development",
               },
             ],
           },
