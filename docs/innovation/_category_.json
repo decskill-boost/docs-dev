@@ -1,0 +1,10 @@
+{
+  "label": "Innovation Hub",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "title": "Innovation Hub",
+    "description": "Propose, discuss, and track innovative ideas for improving our projects and processes.",
+    "slug": "/innovation"
+  }
+}

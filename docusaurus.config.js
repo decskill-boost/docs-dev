@@ -61,7 +61,27 @@ const config = {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "left",
-            label: "Documentation",
+            label: "Docs",
+          },
+          {
+            to: "/docs/best-practices",
+            label: "Best Practices",
+            position: "left",
+          },
+          {
+            to: "/innovation",
+            label: "Innovation",
+            position: "left",
+          },
+          {
+            to: "/forum",
+            label: "Forum",
+            position: "left",
+          },
+          {
+            to: "/news",
+            label: "News",
+            position: "left",
           },
           {
             href: "https://github.com/decskill-boost",

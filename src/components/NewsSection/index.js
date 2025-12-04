@@ -94,7 +94,7 @@ export function NewsSection() {
               that matter for your projects.
             </p>
           </div>
-          <a href="/docs-dev/docs/news" className={classes.viewAllLink}>
+          <a href="/docs-dev/news" className={classes.viewAllLink}>
             View All News
             <IconArrowRight size={16} />
           </a>
@@ -103,7 +103,7 @@ export function NewsSection() {
         {/* News Grid */}
         <div className={classes.newsGrid}>
           {/* Featured Card */}
-          <a href="/docs-dev/docs/news/1" className={classes.featuredCard}>
+          <a href="/docs-dev/news" className={classes.featuredCard}>
             <div className={classes.featuredImageWrapper}>
               <div className={classes.featuredImage}>
                 <featuredNews.icon
@@ -140,7 +140,7 @@ export function NewsSection() {
             {smallNews.map((news) => (
               <a
                 key={news.id}
-                href={`/docs-dev/docs/news/${news.id}`}
+                href="/docs-dev/news"
                 className={classes.smallCard}
               >
                 <div className={classes.smallCardIcon}>
@@ -171,7 +171,7 @@ export function NewsSection() {
             {tags.map((tag) => (
               <a
                 key={tag.name}
-                href={`/docs-dev/docs/news?tag=${tag.name.toLowerCase()}`}
+                href="/docs-dev/news"
                 className={classes.tag}
               >
                 <tag.icon size={14} className={classes.tagIcon} />

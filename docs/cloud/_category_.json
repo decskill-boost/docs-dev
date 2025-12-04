@@ -1,0 +1,10 @@
+{
+  "label": "Cloud & Infrastructure",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "title": "Cloud & Infrastructure",
+    "description": "Documentation and best practices for AWS, Azure, GCP, Docker, and Kubernetes.",
+    "slug": "/cloud"
+  }
+}

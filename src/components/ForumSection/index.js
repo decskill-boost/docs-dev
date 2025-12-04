@@ -121,7 +121,7 @@ export function ForumSection() {
               propose innovations, and learn from the community.
             </p>
 
-            <a href="/docs-dev/docs/forum" className={classes.actionButton}>
+            <a href="/docs-dev/forum" className={classes.actionButton}>
               <IconMessageCircle size={18} />
               View All Discussions
             </a>
@@ -150,7 +150,7 @@ export function ForumSection() {
               return (
                 <a
                   key={discussion.id}
-                  href={`/docs-dev/docs/forum/${discussion.id}`}
+                  href="/docs-dev/forum"
                   className={`${classes.discussionCard} ${
                     discussion.featured ? classes.discussionFeatured : ""
                   }`}

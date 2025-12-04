@@ -7,10 +7,10 @@ import "@mantine/carousel/styles.css";
 import { HeroTitle } from "../components/HeroTitle";
 import { FeaturesSection } from "../components/FeaturesSection";
 import { ForumSection } from "../components/ForumSection";
+import { IdeasSection } from "../components/IdeasSection";
 import { NewsSection } from "../components/NewsSection";
 import classes from "./index.module.css";
 import {
-  IconBook,
   IconBrandGithub,
   IconRocket,
 } from "@tabler/icons-react";
@@ -64,6 +64,7 @@ export default function Home() {
           <HeroTitle />
           <main>
             <FeaturesSection />
+            <IdeasSection />
             <ForumSection />
             <NewsSection />
             <CTASection />

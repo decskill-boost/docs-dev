@@ -1,0 +1,10 @@
+{
+  "label": "Security",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "title": "Security",
+    "description": "Security best practices, guidelines, and vulnerability prevention.",
+    "slug": "/security"
+  }
+}

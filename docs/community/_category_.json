@@ -1,0 +1,10 @@
+{
+  "label": "Community Forum",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Community Forum",
+    "description": "Connect with fellow developers, share knowledge, and discuss technical challenges.",
+    "slug": "/community"
+  }
+}
