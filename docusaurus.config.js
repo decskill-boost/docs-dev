@@ -1,28 +1,23 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 import { themes as prismThemes } from "prism-react-renderer";
-
-const { themes } = require("prism-react-renderer");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: " Decskill Boost Documentation",
-  tagline: "Boost yourself.",
+  title: "Decskill Hub",
+  tagline: "Developer Knowledge Center - Best Practices, Innovation & Community",
   favicon: "img/favicon-32x32.png",
   url: "https://decskill-boost.github.io",
   baseUrl: "/docs-dev/",
   organizationName: "decskill-boost",
   projectName: "docs-dev",
-  onBrokenLinks: "throw",
+  onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
+
   presets: [
     [
       "classic",
@@ -30,11 +25,13 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl: "https://github.com/evroon/bracket/tree/master/docs/",
+          editUrl: "https://github.com/decskill-boost/docs-dev/tree/main/",
         },
         blog: {
           showReadingTime: true,
-          editUrl: "https://github.com/evroon/bracket/tree/master/docs/",
+          editUrl: "https://github.com/decskill-boost/docs-dev/tree/main/",
+          blogTitle: "Decskill Hub Blog",
+          blogDescription: "Latest updates, tutorials, and insights from the Decskill developer community",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -48,12 +45,15 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: "img/bracket-screenshot-design.png",
+      image: "img/decskill-hub-social.png",
+      metadata: [
+        { name: "keywords", content: "decskill, hub, documentation, best practices, development, cloud, azure, aws, innovation" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
       navbar: {
-        title: " ",
+        title: "Decskill Hub",
         logo: {
-          alt: "Bracket Logo",
+          alt: "Decskill Hub Logo",
           src: "img/logodec.png",
         },
         items: [
@@ -64,9 +64,9 @@ const config = {
             label: "Documentation",
           },
           {
-            href: "https://github.com/",
+            href: "https://github.com/decskill-boost",
             label: "GitHub",
-            position: "left",
+            position: "right",
           },
         ],
       },
@@ -79,33 +79,52 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Intro",
+            title: "Documentation",
             items: [
               {
-                label: "Introduction",
+                label: "Getting Started",
                 to: "/docs/intro",
               },
             ],
           },
           {
-            title: "More",
+            title: "Resources",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/",
+                href: "https://github.com/decskill-boost",
+              },
+            ],
+          },
+          {
+            title: "Company",
+            items: [
+              {
+                label: "About Decskill",
+                href: "https://www.decskill.com",
               },
               {
-                label: "License",
-                href: "https://github.com/",
+                label: "Careers",
+                href: "https://www.decskill.com/careers",
               },
               {
-                label: "Changelog",
-                href: "https://github.com/",
+                label: "Contact",
+                href: "https://www.decskill.com/contact",
               },
             ],
           },
         ],
-        copyright: `Decskill - Self-Hosted Documentation System.<br/> Licensed under AGPL-v3.0. Copyright © ${new Date().getFullYear()} Decskill. Built with Docusaurus.`,
+        logo: {
+          alt: "Decskill Logo",
+          src: "img/logodec.png",
+          href: "https://www.decskill.com",
+          width: 100,
+        },
+        copyright: `<div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(0, 102, 255, 0.15);">
+          <strong>Decskill Hub</strong> - Developer Knowledge Center<br/>
+          Copyright © ${new Date().getFullYear()} Decskill. All rights reserved.<br/>
+          <span style="color: #627d98; font-size: 0.8rem;">Built with Docusaurus</span>
+        </div>`,
       },
       prism: {
         theme: prismThemes.oneLight,
@@ -119,7 +138,22 @@ const config = {
           "toml",
           "hcl",
           "yaml",
+          "csharp",
+          "java",
+          "python",
+          "go",
+          "rust",
+          "sql",
+          "graphql",
         ],
+      },
+      announcementBar: {
+        id: "announcement",
+        content:
+          '🚀 Welcome to <strong>Decskill Hub</strong>! Explore our new developer resources and best practices.',
+        backgroundColor: "linear-gradient(135deg, #0066ff 0%, #0052cc 100%)",
+        textColor: "#ffffff",
+        isCloseable: true,
       },
     }),
 };

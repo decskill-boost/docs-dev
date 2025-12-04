@@ -1,36 +1,411 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- *
- * Use https://docusaurus.io/docs/styling-layout to change these values.
+ * Decskill Hub - Custom Design System
+ * Neo-Corporate Futuristic Aesthetic
  */
 
-/* You can override the default Infima variables here. */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+/* Design Tokens */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary Blues */
+  --decskill-navy: #0a1628;
+  --decskill-navy-light: #0f2241;
+  --decskill-blue: #0066ff;
+  --decskill-blue-light: #3385ff;
+  --decskill-cyan: #00d4ff;
+  --decskill-cyan-light: #5ce1ff;
+
+  /* Neutral Palette */
+  --decskill-white: #ffffff;
+  --decskill-gray-100: #f0f4f8;
+  --decskill-gray-200: #d9e2ec;
+  --decskill-gray-300: #9fb3c8;
+  --decskill-gray-400: #627d98;
+  --decskill-gray-500: #486581;
+
+  /* Accent Colors */
+  --decskill-success: #00c853;
+  --decskill-warning: #ffab00;
+  --decskill-error: #ff1744;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0066ff 0%, #00d4ff 100%);
+  --gradient-dark: linear-gradient(180deg, #0a1628 0%, #0f2241 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(0, 102, 255, 0.15) 0%, rgba(0, 212, 255, 0.15) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(15, 34, 65, 0.8) 0%, rgba(10, 22, 40, 0.95) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 102, 255, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 102, 255, 0.12);
+  --shadow-lg: 0 8px 40px rgba(0, 102, 255, 0.16);
+  --shadow-glow: 0 0 40px rgba(0, 102, 255, 0.3);
+  --shadow-glow-cyan: 0 0 40px rgba(0, 212, 255, 0.25);
+
+  /* Typography */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Docusaurus Overrides */
+  --ifm-color-primary: #0066ff;
+  --ifm-color-primary-dark: #0052cc;
+  --ifm-color-primary-darker: #0047b3;
+  --ifm-color-primary-darkest: #003d99;
+  --ifm-color-primary-light: #3385ff;
+  --ifm-color-primary-lighter: #4d94ff;
+  --ifm-color-primary-lightest: #66a3ff;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: var(--font-body);
+  --ifm-heading-font-family: var(--font-display);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 102, 255, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #bcafed;
-  --ifm-color-primary-dark: #a08de5;
-  --ifm-color-primary-darker: #927de2;
-  --ifm-color-primary-darkest: #674ad6;
-  --ifm-color-primary-light: #d8d1f5;
-  --ifm-color-primary-lighter: #e6e1f8;
-  --ifm-color-primary-lightest: #ffffff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #00d4ff;
+  --ifm-color-primary-dark: #00bfe6;
+  --ifm-color-primary-darker: #00aad9;
+  --ifm-color-primary-darkest: #0095bf;
+  --ifm-color-primary-light: #33ddff;
+  --ifm-color-primary-lighter: #4de1ff;
+  --ifm-color-primary-lightest: #66e6ff;
+  --ifm-background-color: var(--decskill-navy);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 212, 255, 0.15);
 }
 
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--decskill-navy);
+  color: var(--decskill-gray-100);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 102, 255, 0.1);
+  padding: var(--space-sm) 0;
+}
+
+.navbar__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--decskill-gray-200);
+  transition: color var(--transition-fast);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--decskill-cyan);
+}
+
+/* Footer Styles */
 .footer {
-  background-color: light-dark(var(--mantine-color-dark-8), var(--mantine-color-dark-8));
+  background: var(--gradient-dark);
+  border-top: 1px solid rgba(0, 102, 255, 0.15);
+  padding: var(--space-3xl) 0 var(--space-xl);
+}
+
+.footer__title {
+  font-family: var(--font-display);
+  color: var(--decskill-white);
+}
+
+.footer__link-item {
+  color: var(--decskill-gray-300);
+  transition: color var(--transition-fast);
+}
+
+.footer__link-item:hover {
+  color: var(--decskill-cyan);
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: var(--decskill-gray-400);
+  font-size: 0.875rem;
+}
+
+/* Sidebar Styles */
+.menu__link {
+  font-family: var(--font-body);
+  color: var(--decskill-gray-300);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.menu__link:hover {
+  background: rgba(0, 102, 255, 0.1);
+  color: var(--decskill-cyan);
+}
+
+.menu__link--active {
+  background: rgba(0, 102, 255, 0.15);
+  color: var(--decskill-cyan);
+  font-weight: 600;
+}
+
+/* Documentation Content */
+.markdown {
+  font-family: var(--font-body);
+  line-height: 1.7;
+}
+
+.markdown h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xl);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.markdown h2 {
+  font-size: 1.75rem;
+  margin-top: var(--space-3xl);
+  color: var(--decskill-white);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid rgba(0, 102, 255, 0.2);
+}
+
+.markdown code {
+  background: rgba(0, 102, 255, 0.1);
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875em;
+}
+
+/* Code Blocks */
+pre {
+  background: var(--decskill-navy-light) !important;
+  border: 1px solid rgba(0, 102, 255, 0.15);
+  border-radius: var(--radius-md);
+}
+
+/* Tables */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(0, 102, 255, 0.15);
+}
+
+th {
+  background: rgba(0, 102, 255, 0.1);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+td, th {
+  border-bottom: 1px solid rgba(0, 102, 255, 0.1);
+  padding: var(--space-md);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Buttons */
+.button {
+  font-family: var(--font-display);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.button--primary {
+  background: var(--gradient-primary);
+  border: none;
+  box-shadow: var(--shadow-md);
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Search */
+.DocSearch-Button {
+  background: rgba(0, 102, 255, 0.1) !important;
+  border: 1px solid rgba(0, 102, 255, 0.2) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--decskill-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 255, 0.3);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 102, 255, 0.5);
+}
+
+/* Selection */
+::selection {
+  background: rgba(0, 212, 255, 0.3);
+  color: var(--decskill-white);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(0, 102, 255, 0.4);
+  }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Grid Pattern Background Utility */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 102, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 102, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Glow Effect Utility */
+.glow-effect {
+  position: relative;
+}
+
+.glow-effect::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  z-index: -1;
+  filter: blur(20px);
+}
+
+.glow-effect:hover::before {
+  opacity: 0.5;
+}
+
+/* Announcement Bar */
+.announcementBar_node_modules-\@docusaurus-theme-classic-lib-theme-AnnouncementBar-styles-module,
+[class*="announcementBar"] {
+  background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%) !important;
+  color: #ffffff !important;
+  font-family: var(--font-body);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+[class*="announcementBar"] a {
+  color: #00d4ff !important;
+  text-decoration: underline;
+}
+
+[class*="announcementBarContent"] {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+[class*="announcementBarClose"] {
+  color: #ffffff !important;
+}
+
+[class*="announcementBarClose"]:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  :root {
+    --space-3xl: 2.5rem;
+    --space-4xl: 4rem;
+  }
+
+  .navbar {
+    padding: var(--space-xs) 0;
+  }
 }

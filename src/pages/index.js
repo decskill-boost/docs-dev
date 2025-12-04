@@ -1,60 +1,55 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import {
-  Center,
-  Container,
-  createTheme,
-  Image,
-  MantineProvider,
-  Paper,
-  rem,
-  Text,
-  ThemeIcon,
-  Title,
-} from "@mantine/core";
+import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import "@mantine/carousel/styles.css";
+
 import { HeroTitle } from "../components/HeroTitle";
-import { HomeCarousel } from "../components/HomeCarousel";
+import { FeaturesSection } from "../components/FeaturesSection";
+import { ForumSection } from "../components/ForumSection";
+import { NewsSection } from "../components/NewsSection";
 import classes from "./index.module.css";
-import FeaturesCards from "../components/feature_cards";
-import { IconBrandGithub } from "@tabler/icons-react";
+import {
+  IconBook,
+  IconBrandGithub,
+  IconRocket,
+} from "@tabler/icons-react";
 
-const theme = createTheme({});
+const theme = createTheme({
+  fontFamily: "'IBM Plex Sans', sans-serif",
+  headings: {
+    fontFamily: "'Sora', sans-serif",
+  },
+});
 
-function CardGradient() {
+function CTASection() {
   return (
-    <Center mx="1rem" mt="2rem">
-      <Paper
-        radius="md"
-        className={classes.social_card}
-        onClick={() => {
-          open("https://github.com/evroon/bracket");
-        }}
-      >
-        <Center inline>
-          <ThemeIcon
-            size="xl"
-            radius="md"
-            variant="filled"
-            color="black"
-            mr="1rem"
+    <section className={classes.ctaSection}>
+      <div className={classes.ctaContainer}>
+        <h2 className={classes.ctaTitle}>
+          Ready to Start Building?
+        </h2>
+        <p className={classes.ctaSubtitle}>
+          Explore our comprehensive documentation and join the Decskill
+          developer community today.
+        </p>
+        <div className={classes.ctaButtons}>
+          <a href="/docs-dev/docs/intro" className={classes.ctaPrimary}>
+            <IconRocket size={18} />
+            Get Started
+          </a>
+          <a
+            href="https://github.com/decskill-boost"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.ctaSecondary}
           >
-            <IconBrandGithub
-              style={{ width: rem(38), height: rem(38) }}
-              stroke={1.5}
-            />
-          </ThemeIcon>
-          <Text size="xl" fw={500} inline>
-            GitHub
-          </Text>
-        </Center>
-        <Text size="sm" mt="sm" c="dimmed">
-          Go to the GitHub repository to star or fork Bracket, create issues/PRs
-          or start discussions.
-        </Text>
-      </Paper>
-    </Center>
+            <IconBrandGithub size={18} />
+            View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -62,15 +57,18 @@ export default function Home() {
   return (
     <MantineProvider theme={theme} defaultColorScheme="dark">
       <Layout
-        title={""}
-        description="Description will go into a meta tag in <head />"
+        title="Decskill Hub - Developer Knowledge Center"
+        description="Your central hub for development best practices, innovation ideas, technical discussions, and the latest news in cloud and technology."
       >
-        <HeroTitle />
-        <main>
-
-          <CardGradient />
-
-        </main>
+        <div className={classes.pageWrapper}>
+          <HeroTitle />
+          <main>
+            <FeaturesSection />
+            <ForumSection />
+            <NewsSection />
+            <CTASection />
+          </main>
+        </div>
       </Layout>
     </MantineProvider>
   );

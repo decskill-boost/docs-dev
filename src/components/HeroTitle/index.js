@@ -1,58 +1,97 @@
-import { Button, Center, Container, Group, Text } from "@mantine/core";
-import classes from "./styles.module.css";
 import React from "react";
-import { IconLibrary, IconRocket } from "@tabler/icons-react";
+import classes from "./styles.module.css";
+import {
+  IconBook,
+  IconBulb,
+  IconCode,
+  IconRocket,
+  IconUsers,
+} from "@tabler/icons-react";
 
 export function HeroTitle() {
   return (
     <div className={classes.wrapper}>
-      <Container maxSize={"400px"} className={classes.inner}>
+      <div className={classes.glowOrb} />
+
+      {/* Floating Cards - Visual Elements */}
+      <div className={classes.floatingElements}>
+        <div className={`${classes.floatingCard} ${classes.floatingCard1}`}>
+          <div className={classes.floatingCardIcon}>
+            <IconCode size={20} />
+          </div>
+          <div className={classes.floatingCardTitle}>Best Practices</div>
+          <div className={classes.floatingCardDesc}>Clean code standards</div>
+        </div>
+
+        <div className={`${classes.floatingCard} ${classes.floatingCard2}`}>
+          <div className={classes.floatingCardIcon}>
+            <IconBulb size={20} />
+          </div>
+          <div className={classes.floatingCardTitle}>Innovation</div>
+          <div className={classes.floatingCardDesc}>Share your ideas</div>
+        </div>
+
+        <div className={`${classes.floatingCard} ${classes.floatingCard3}`}>
+          <div className={classes.floatingCardIcon}>
+            <IconUsers size={20} />
+          </div>
+          <div className={classes.floatingCardTitle}>Community</div>
+          <div className={classes.floatingCardDesc}>Learn together</div>
+        </div>
+      </div>
+
+      <div className={classes.inner}>
+        {/* Badge */}
+        <div className={classes.badge}>
+          <span className={classes.badgeDot} />
+          Developer Knowledge Platform
+        </div>
+
+        {/* Title */}
         <h1 className={classes.title}>
-          <Text
-            component="span"
-            variant="gradient"
-            gradient={{ from: "indigo", to: "#674ad6" }}
-            inherit
-          >
-            Knowledge Hub
-          </Text>{" "}
-          for Decskill Developers
+          <span className={classes.titleGradient}>Decskill Hub</span>
+          <span className={classes.titleSecondary}>
+            Knowledge Center for Developers
+          </span>
         </h1>
 
-        <Text className={classes.description} color="dimmed">
-          Enhance your skills with Decskill’s detailed documentation, tools, and resources. Build, learn, and advance your technical expertise.
-        </Text>
+        {/* Description */}
+        <p className={classes.description}>
+          Your central hub for development best practices, innovation ideas,
+          technical discussions, and the latest news in cloud and technology.
+          Empowering Decskill developers to build better, together.
+        </p>
 
-        <Group className={classes.controls}>
-          <Button
-            size="xl"
-            className={classes.control}
-            variant="gradient"
-            gradient={{ from: "indigo", to: "#674ad6" }}
-            onClick={() => {
-              open("", "_self");
-            }}
-          >
-            <Center inline>
-              <IconRocket size="32px" style={{ marginRight: "0.5rem" }} />
-              Know more
-            </Center>
-          </Button>
-          <Button
-            size="xl"
-            className={classes.control}
-            variant="default"
-            onClick={() => {
-              open("docs/running-bracket/quickstart", "_self");
-            }}
-          >
-            <Center inline>
-              <IconLibrary size="32px" style={{ marginRight: "0.5rem" }} />
-              Get started
-            </Center>
-          </Button>
-        </Group>
-      </Container>
+        {/* CTA Buttons */}
+        <div className={classes.controls}>
+          <a href="/docs-dev/docs/intro" className={classes.controlPrimary}>
+            <span>
+              <IconRocket size={20} />
+              Explore Documentation
+            </span>
+          </a>
+          <a href="#features" className={classes.controlSecondary}>
+            <IconBook size={20} />
+            Learn More
+          </a>
+        </div>
+
+        {/* Stats */}
+        <div className={classes.stats}>
+          <div className={classes.statItem}>
+            <span className={classes.statNumber}>50+</span>
+            <span className={classes.statLabel}>Best Practice Guides</span>
+          </div>
+          <div className={classes.statItem}>
+            <span className={classes.statNumber}>10+</span>
+            <span className={classes.statLabel}>Technology Stacks</span>
+          </div>
+          <div className={classes.statItem}>
+            <span className={classes.statNumber}>100%</span>
+            <span className={classes.statLabel}>Community Driven</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
