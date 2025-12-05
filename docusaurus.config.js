@@ -51,7 +51,6 @@ const config = {
         { name: "twitter:card", content: "summary_large_image" },
       ],
       navbar: {
-        title: "Decskill Hub",
         logo: {
           alt: "Decskill Hub Logo",
           src: "img/logodec.png",
