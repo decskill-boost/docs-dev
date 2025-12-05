@@ -400,7 +400,7 @@ export function IdeasPage() {
                 </div>
 
                 {/* Title & Description */}
-                <a href="/docs-dev/innovation" className={classes.cardLink}>
+                <a href="/docs-dev/innovation/idea" className={classes.cardLink}>
                   <h3 className={classes.cardTitle}>{idea.title}</h3>
                 </a>
                 <p className={classes.cardDescription}>{idea.description}</p>

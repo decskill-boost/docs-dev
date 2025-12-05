@@ -472,7 +472,7 @@ export function ForumPage() {
                         <span className={classes.discussionTime}>{discussion.time}</span>
                       </div>
 
-                      <a href="/docs-dev/forum" className={classes.discussionLink}>
+                      <a href="/docs-dev/forum/discussion" className={classes.discussionLink}>
                         <h3 className={classes.discussionTitle}>{discussion.title}</h3>
                       </a>
                       <p className={classes.discussionExcerpt}>{discussion.excerpt}</p>
